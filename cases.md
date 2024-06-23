@@ -28,7 +28,7 @@ In 2017 they had a library that was not initialized, but anyone could set the ow
 They had the initialize function public, so anyone could change the forge address to their address and then use the withdraw function to send them all the funds from the contract.
 </div>
 
-<div style="background: #eee">
+<div>
     <h4>My thoughts</h4>
-    What I also see quite often is that they abuse the call function. By doing that you can call some other contract function(in the name of the contract you're calling it from, so not from your own) even some contract that they imported. Crazy stuff.
+    <pre><code>What I also see quite often is that they abuse the call function. By doing that you can call some other contract function(in the name of the contract you're calling it from, so not from your own) even some contract that they imported. Crazy stuff.</pre></code>
 </div>
