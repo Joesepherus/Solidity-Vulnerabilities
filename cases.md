@@ -2,8 +2,8 @@
 
 
 <div>
-<h3>Uranium Finance</h3>
-Changing values in standardised contract, but forgetting to change them in one instance. Missplaced zero.
+    <h3>Uranium Finance</h3>
+    Changing values in standardised contract, but forgetting to change them in one instance. Missplaced zero.
 </div>
 
 <div>
@@ -16,10 +16,7 @@ Changing values in standardised contract, but forgetting to change them in one i
     Reentrancy Attack
 </div>
 
-<div>
-    <h3>Uranium Finance</h3>
-    What I also see quite often is that they abuse the call function. By doing that you can call some other contract function(in the name of the contract you're calling it from, so not from your own) even some contract that they imported. Crazy stuff.
-</div>
+
 
 <div>
 <h3>Multi signature Wallet(The Parity Wallet Bug)</h3>
@@ -29,4 +26,9 @@ In 2017 they had a library that was not initialized, but anyone could set the ow
 <div>
 <h3>Crypto Punks</h3>
 They had the initialize function public, so anyone could change the forge address to their address and then use the withdraw function to send them all the funds from the contract.
+</div>
+
+<div style="background: #eee">
+    <h4>My thoughts</h4>
+    What I also see quite often is that they abuse the call function. By doing that you can call some other contract function(in the name of the contract you're calling it from, so not from your own) even some contract that they imported. Crazy stuff.
 </div>
