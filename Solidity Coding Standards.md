@@ -1,3 +1,89 @@
+<p>In Solidity development, where smart contracts execute on the blockchain, coding standards are particularly crucial. The decentralized nature of blockchain applications makes it difficult to modify or fix deployed contracts.<p/>
+<h3>Why we need to follow Coding Standards?</h3>
+<p>Improved Collaboration</p>
+<p>Enhanced Readability</p>
+<p>Reduced Maintenance Effort</p>
+<p>Code Reusability</p>
+<p>Security</p>
+<p>So basically it's about making sure the code is readable for even a junior and even someone who is not familiar with the specific project and also for lowering the amount of work it is to change something and maintain the project overall. And ofocurse can't forget about security, that's what writting good contracts is all about. SECURITY</p>
+
+<h3>Naming Conventions</h3>
+<p>
+Contracts: Use PascalCase (capitalized words without spaces) for contract names. For example, MyContract.
+</p>
+<p>
+Functions: Use camelCase (capitalizing the first letter of each word except the first) for function names. For example, myFunction.
+</p>
+<p>
+Variables: Use camelCase for variable names. Avoid using single-letter variable names unless they are used as loop counters.
+</p>
+<p>
+Constants: Use uppercase with underscores for constant variable names. For example, MY_CONSTANT.
+</p>
+
+<h3>Writing Efficient Code to Minimize Gas Costs</h3>
+<p>
+Avoid unnecessary computations: Carefully analyze your code and remove any calculations that are not required. This includes redundant loops, unnecessary conversions, and excessive data operations.
+</p>
+<p>
+Use efficient data structures: Choose the appropriate data structures for your specific use case. For example, using arrays instead of mappings can be more efficient in certain situations.
+</p>
+<p>
+Minimize storage operations: Storage operations are more expensive than memory operations. Reduce the number of read and write operations to storage variables by leveraging memory variables wherever possible.
+</p>
+<p>
+Reuse code: Encapsulate reusable functionality in separate functions or libraries. By reusing code, you can reduce duplicate operations and save gas.
+</p>
+
+<h3>Avoiding Common Gas-Wasting Patterns</h3>
+<p>
+Excessive use of loops: Loops can consume a significant amount of gas, especially if they iterate over large data sets. Consider alternative approaches, such as using mappings or indexing mechanisms, to avoid gas inefficiency.
+</p>
+<p>
+Unbounded iterations: Be cautious when using loops with undetermined or unbounded iterations. Always ensure that loops have a clear termination condition to prevent potential gas exhaustion.
+</p>
+<p>
+Large data storage: Storing excessive data on the blockchain can result in higher gas costs. Evaluate whether all the data needs to be stored on-chain or if off-chain storage solutions can be utilized.
+</p>
+<p>
+Inefficient algorithms: Choose algorithms that are optimized for gas efficiency. For example, using a linear search when a binary search is applicable can lead to unnecessary gas consumption.
+</p>
+<p>Optimizing gas usage is essential for smart contract developers to ensure cost-effective and efficient execution on the Ethereum blockchain.</p>
+
+<h3>Best Practices for Secure Solidity Development</h3>
+<p>
+Access Control: Implement robust access control mechanisms to restrict unauthorized access to contract functions and data. Use modifiers and access control patterns to define permission levels and enforce proper authorization.
+</p>
+<p>
+Input Validation: Validate and sanitize user input to prevent malicious code execution and ensure the integrity of the contract. Use appropriate data validation techniques to validate user input and prevent potential vulnerabilities such as overflow or underflow.
+</p>
+<p>
+Secure External Calls: Exercise caution when interacting with external contracts or external data sources. Implement security measures such as checks-effects-interactions pattern to prevent reentrancy attacks and ensure secure interactions.
+</p>
+<p>
+Secure Smart Contract Upgradeability: Consider implementing upgradeable smart contracts to address bugs or add new features without compromising the integrity of the contract. Follow best practices for ensuring upgradability in Solidity, such as using proxy contracts and upgradeable storage patterns.
+</p>
+<p>
+Code Auditing and Testing: Conduct thorough code audits and extensive testing to identify and fix vulnerabilities. Perform security audits by external experts to obtain an independent assessment of the contract’s security.
+</p>
+
+<h3>Avoiding Common Security Vulnerabilities</h3>
+<p>
+Reentrancy: Prevent reentrancy attacks by following best practices such as using the checks-effects-interactions pattern, ensuring proper state management, and carefully handling external calls.
+</p>
+<p>
+Integer Overflow/Underflow: Implement checks and validations to prevent integer overflow/underflow vulnerabilities. Utilize SafeMath libraries or similar techniques to perform arithmetic operations securely.
+</p>
+<p>
+Unchecked External Calls: Exercise caution when making external calls to other contracts. Validate and verify the integrity of the external contract before interacting with it.
+</p>
+<p>
+Denial of Service: Avoid potential denial of service (DoS) attacks by carefully managing gas usage, implementing gas limits, and avoiding loops with unpredictable iterations.
+</p>
+<p>
+Front-Running: Protect against front-running attacks by implementing appropriate mechanisms such as using cryptographic solutions or randomization techniques.
+</p>
+
 <h3>Include SPDX-License-Identifier</h3><p></p><h3>You should fix the Solidity version to the compiler you are using.</h3><p>Dont use this</p><pre><code>pragma solidity ^0.8.0;</code></pre><p>Use this</p><pre><code>pragma solidity 0.8.21;</code></pre><p><br>Explicitly set the library version in the import statement</p><p></p><h3>Use named imports instead of importing the entire namespace</h3><p>Instead of doing this</p><pre><code>import "@openzeppelin/contracts@4.9.3/token/ERC20/ERC20.sol";</code></pre><p>Do this</p><pre><code>import {ERC20} from "@openzeppelin/contracts@4.9.3/token/ERC20/ERC20.sol";</code></pre><p></p><h3>Delete unused imports</h3><p></p><h3>Apply contract-level natspec</h3><p>An example natspec for a contract is shown below.</p><pre><code>/// @title Liquidity token for Foo protocol
 /// @author Foo Incorporated
 /// @notice Notes for non-technical readers/
@@ -29,3 +115,4 @@ function calculateAccumulatedInterest(address token, uint256 since) public overr
 } </code></pre><p></p><p>For the dev parameters, it’s good to notify what kind of state changes it can do, for example emitting an event, sending ether, selfdestructing, etc.</p><p>The notice and param natspec are read by Etherscan.</p><p></p><h3>Remove commented out code</h3><p></p><h3>Think carefully about variable names</h3><p></p><h2>Additional Tricks for organizing large codebases</h2><ul><li><p>If you have a lot of storage variables, you can define all the storage variables in a single contract, then inherit from that contract to gain access to those storage variables.</p></li><li><p>If your functions require a significant amount of parameters, use a struct to pass the information around.</p></li><li><p>If you need a lot of imports, you can import all the files and types into one solidity file, then import that file (you would need to intentionally break the rule about named imports).</p></li><li><p>Use libraries to group functions of the same category together and make files smaller.</p></li></ul>
 
 <a href="https://www.rareskills.io/post/solidity-style-guide" target="_blank" rel="noopener noreferrer">link</a>
+<a href="https://www.soliditylibraries.com/best-practices/solidity-coding-standards-ensuring-clean/" target="_blank" rel="noopener noreferrer">link</a>
