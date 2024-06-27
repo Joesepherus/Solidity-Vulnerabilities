@@ -1,5 +1,5 @@
 <h2>Bug Bounty</h2>
-<h3>Bug Bounty Platforms<h3>
+<h3>Bug Bounty Platforms</h3>
 <ul>
 <li>
 Code4rena
