@@ -55,5 +55,6 @@ contract Attacker {
 }
 </code></pre>
 
+<a href="https://blog.finxter.com/tx-origin-phishing-attack-smart-contract-security-series-part-4/" target="_blank" rel="noopener noreferrer">link</a>
 </p>
 </div>
