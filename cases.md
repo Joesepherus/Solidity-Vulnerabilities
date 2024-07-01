@@ -35,6 +35,17 @@ What happened with Safemoon is that they allowed anyone to burn tokens. So what 
 </div>
 
 <div>
+<h3>Seneca Protocol Attack</h3>
+<p>So Seneca Protocol was hacked by calling performActions and inside there calling a function _call which was set to a constact "30". Then from there on you can call anything using the callData. So the attack called the standard ERC20 function transferFrom and as data he set the from address a victim address and to address his address and any arbitrary value of ether. 
+</p>
+<p>And that's how the attacker was able to steal money from Seneca. What a dumb way to go really. And you would think these kinds of attacks wouldn't happen anymore, so trivial to secure your damn call functions giving anyone the power to call anything is beyond me haha. This hack happened very recently in February 2024.
+</p>
+<a href="https://github.com/SenecaDefi/SenecaProtocol/blob/main/contracts/Chamber.sol" target="_blank" rel="noopener noreferrer">Seneca Protocol Chamber</a>
+<a href="https://www.cyfrin.io/blog/seneca-attack-hack-analysis-proof-of-concept" target="_blank" rel="noopener noreferrer">link</a>
+<a href="https://rekt.news/seneca-protocol-rekt/" target="_blank" rel="noopener noreferrer">link 2</a>
+</div>
+
+<div>
     <h4>My thoughts</h4>
     <pre><code>What I also see quite often is that they abuse the call function. By doing that you can call some other contract function(in the name of the contract you're calling it from, so not from your own) even some contract that they imported. Crazy stuff.</pre></code>
 </div>
