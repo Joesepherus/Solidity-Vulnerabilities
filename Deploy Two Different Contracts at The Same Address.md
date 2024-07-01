@@ -13,3 +13,9 @@
 <p>Attacker -- selfdestruct --> Innocent Proposal</p>
 <p>Attacker -- selfdestruct --> Deployer</p>
 <p>Attacker -- create2 --> Deployer -- create --> Malicious Proposal</p>
+
+<a href="https://www.youtube.com/watch?v=whjRc4H-rAc&list=PLO5VPQH6OWdWsCgXJT9UuzgbC8SPvTRi5&index=18" target="_blank" rel="noopener noreferrer">link</a>
+
+<a href="https://www.wired.com/story/tornado-cash-money-laundering-case-crypto-privacy/" target="_blank" rel="noopener noreferrer">link 2</a>
+
+<a href="https://www.halborn.com/blog/post/explained-the-tornado-cash-hack-may-2023" target="_blank" rel="noopener noreferrer">link 3</a>
