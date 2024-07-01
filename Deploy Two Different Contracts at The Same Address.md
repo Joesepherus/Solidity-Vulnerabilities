@@ -8,3 +8,8 @@
 <p>Becuase the way create works is it takes the sha hash of sender address + its nonce to create the new contract.</p>
 <p>And when you delete the deployer contract and deploy it again you have the same sender address and you have reset the nonce counter, so this allows you to create the malicious contract at the same address where the innocent contract was</p>
 <p>And by using delegatecall you can change the state of the actual tornado cash contract and take control over it</p>
+<p>Attacker -- create2 --> Deployer -- create --> Innocent Proposal</p>
+<p>DAO -- approve --> Innocent Proposal</p>
+<p>Attacker -- selfdestruct --> Innocent Proposal</p>
+<p>Attacker -- selfdestruct --> Deployer</p>
+<p>Attacker -- create2 --> Deployer -- create --> Malicious Proposal</p>
