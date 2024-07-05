@@ -1,6 +1,9 @@
 <h3>Platforms for finding a Web3 Job</h3>
 <ul>
 <li>
+wellfound.com
+</li>
+<li>
 web3.career
 </li>
 <li>
@@ -26,5 +29,8 @@ linkedin
 </li>
 <li>
 glassdoor
+</li>
+<li>
+twitter/X
 </li>
 </ul>
