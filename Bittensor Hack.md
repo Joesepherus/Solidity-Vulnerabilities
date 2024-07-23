@@ -17,4 +17,10 @@ In response to the attack, the Bittensor team quickly put the chain into "safe m
 <p>
 This swift action may have prevented further losses, but it also highlighted the centralized control the team maintains over the supposedly decentralized network.
 </p>
+<p>
+The Bittensor hack exposes a critical vulnerability in the crypto ecosystem, the reliance on third-party package managers.
+</p>
+<p>
+While blockchain protocols themselves may be secure, the tools developers use to interact with them can become unexpected points of failure.
+</p>
 </div>
